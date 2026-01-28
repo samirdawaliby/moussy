@@ -3,8 +3,8 @@ main = "src/index.ts"
 compatibility_date = "2024-01-15"
 compatibility_flags = ["nodejs_compat"]
 
-# Account settings
-account_id = "f2899fca523652c5c37ac4e10ab3024b"
+# Account settings - salimata.fomba@ynov.com
+account_id = "2dd9d616fb50c8296c2e28e2bd657bea"
 
 [vars]
 ENVIRONMENT = "development"
@@ -13,12 +13,7 @@ ENVIRONMENT = "development"
 [[d1_databases]]
 binding = "DB"
 database_name = "moussy-db"
-database_id = "76cbd6fd-a5a8-450d-bde6-ffb59e365bcd"
-
-# R2 Storage
-[[r2_buckets]]
-binding = "STORAGE"
-bucket_name = "moussy-files"
+database_id = "4d79f33c-aadf-431f-a624-c1c636dd6571"
 
 # Workers AI
 [ai]
@@ -27,7 +22,7 @@ binding = "AI"
 # KV for sessions cache
 [[kv_namespaces]]
 binding = "SESSIONS"
-id = "abc25f6a954e4562b4dc2a9597bb26b0"
+id = "bdfaa47b8b264a72ac1300f522da09c4"
 
 # Development settings
 [dev]
@@ -37,9 +32,6 @@ local_protocol = "http"
 # Production environment
 [env.production]
 vars = { ENVIRONMENT = "production" }
-# routes = [
-#   { pattern = "api.moussy.fr/*", zone_name = "moussy.fr" }
-# ]
 
 # Staging environment
 [env.staging]

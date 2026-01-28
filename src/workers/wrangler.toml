@@ -1,0 +1,46 @@
+name = "moussy-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Account settings
+# account_id = "your_account_id" # Will be set after login
+
+[vars]
+ENVIRONMENT = "development"
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "moussy-db"
+database_id = "" # Will be set after creation
+
+# R2 Storage
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "moussy-files"
+
+# Workers AI
+[ai]
+binding = "AI"
+
+# KV for sessions cache
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "" # Will be set after creation
+
+# Development settings
+[dev]
+port = 8787
+local_protocol = "http"
+
+# Production environment
+[env.production]
+vars = { ENVIRONMENT = "production" }
+routes = [
+  { pattern = "api.moussy.fr/*", zone_name = "moussy.fr" }
+]
+
+# Staging environment
+[env.staging]
+vars = { ENVIRONMENT = "staging" }

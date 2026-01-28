@@ -4,7 +4,7 @@ compatibility_date = "2024-01-15"
 compatibility_flags = ["nodejs_compat"]
 
 # Account settings
-# account_id = "your_account_id" # Will be set after login
+account_id = "f2899fca523652c5c37ac4e10ab3024b"
 
 [vars]
 ENVIRONMENT = "development"
@@ -13,7 +13,7 @@ ENVIRONMENT = "development"
 [[d1_databases]]
 binding = "DB"
 database_name = "moussy-db"
-database_id = "" # Will be set after creation
+database_id = "76cbd6fd-a5a8-450d-bde6-ffb59e365bcd"
 
 # R2 Storage
 [[r2_buckets]]
@@ -27,7 +27,7 @@ binding = "AI"
 # KV for sessions cache
 [[kv_namespaces]]
 binding = "SESSIONS"
-id = "" # Will be set after creation
+id = "abc25f6a954e4562b4dc2a9597bb26b0"
 
 # Development settings
 [dev]
@@ -37,9 +37,9 @@ local_protocol = "http"
 # Production environment
 [env.production]
 vars = { ENVIRONMENT = "production" }
-routes = [
-  { pattern = "api.moussy.fr/*", zone_name = "moussy.fr" }
-]
+# routes = [
+#   { pattern = "api.moussy.fr/*", zone_name = "moussy.fr" }
+# ]
 
 # Staging environment
 [env.staging]
